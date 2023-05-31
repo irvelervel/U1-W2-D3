@@ -6,17 +6,19 @@
 // Il ciclo "while" è una struttura che potenzialmente ripete del codice un numero INDEFINITO di volte.
 
 // let counter = 5
-
 // while (counter < 15) {
 //   console.log('Il valore di counter è', counter)
 //   counter++
 // }
 
-let random = 0
+// ATTENZIONE: se la condizione specificata NON diventerà mai false (ovvero se non cambiate il valore della variabile
+// che verificate ad ogni ciclo) entrerete in un INFINITE LOOP (ciclo infinito!).
 
+let random = 0
 while (random < 5) {
-  console.log('il valore di random è', random)
   random += Math.random() // aggiungo a random un valore pseudo-randomico da 0.00000001 a 0.99999999 (più o meno!)
+  console.log('il valore di random è', random)
+  // ad un certo punto il valore di random diventerà superiore o uguale a 5, e il ciclo while terminerà :)
 }
 
 console.log('FINITO! ora random è ', random)
